@@ -1,11 +1,11 @@
 # CS345-LSTM
-A project for CS345 - Introduction to Machine Learning.
+A project for CS345 - Introduction to Machine Learning. 
 
 
 ## Project Proposal
 
 ### Topic 
-A day trading bot that utilizes LSTM, Long Short Term Memory, Machine Learning to predict opening and closing positions to make buy and sell decisions. 
+A day trading bot that utilizes LSTM, Long Short Term Memory, Machine Learning to predict opening and closing positions to make buy and sell decisions through time series forcasting. 
 
 ### Interest
 We are interested in exploring the applications of Machine Learning to analyze stock market data for potential use in the real world. We are both interested in trading stock and building portfolios and want to see if an accurately trained Machine Learning Model can assist in portfolio development. 
