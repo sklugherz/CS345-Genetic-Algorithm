@@ -33,9 +33,23 @@ class agent:
         self.active_trades = []
 
     def mutate():
+        """
+            for range of trades
+                if random.rand < mutation rate
+                    mutate a order by flipping a buy and sell order?
+            return trades
+        """
         pass
 
     def reproduce():
+        """ lil lost on this one
+            parent1,parent2 = choose_parents(parents)
+            parent1,parent2 = cross_over(parent1, parent2)
+            if parent1 fitness <= parent2 fitness
+                return parent2.mutate()
+            else 
+                return parent1.mutate()
+        """
         pass
 
     #  buy order denoted by 1
@@ -64,6 +78,16 @@ class agent:
 
 
     def crossover(parent1, parent2):
+        """
+            if rand.rand < crossover rate
+                point = random in range of number of trades
+                 return parent1 up to cross over point +  <--- refering to each parents trade set
+                    parent2 past cross over point,             when refering to parent themselves
+                    parent2 up to cross over point +
+                    parent1 past cross over point
+            else 
+                return parent1, parent2
+        """
         pass
 
     def choose_parents(agents):
