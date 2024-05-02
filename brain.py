@@ -7,7 +7,7 @@ import tensorflow as tf
 
 class brain:
     def __init__():
-        nn = tf.keras.models.Sequential()
+        nn = tf.keras.Sequential()
         nn.add(tf.keras.layers.Dense(8, activation='relu', input_shape=(5,)))
         nn.add(tf.keras.layers.Dense(8, activation='relu'))
         nn.add(tf.keras.layers.Dense(8, activation='relu'))
