@@ -1,20 +1,20 @@
 #import numpy as np
-#import tensorflow as tf
-from keras.models import Sequential #, Model
-from keras.layers import Dense #, Dropout, Input
-from keras.optimizers import SGD
+import tensorflow as tf
+# from keras.models import Sequential, Model, Input
+# from keras.layers import Dense
+# from keras.optimizers import Adam
 
 
 class brain:
-
-    NUM_FEATURES = 5 #number of columns in out data
-    
     def __init__():
-        nn = Sequential()
-        nn.add(Dense(NUM_FEATURES * 2, activation='relu', input_shape=(NUM_FEATURES,)))
-        nn.add(Dense(1)) #output layer
+        nn = tf.keras.models.Sequential()
+        nn.add(tf.keras.layers.Dense(8, activation='relu', input_shape=(5,)))
+        nn.add(tf.keras.layers.Dense(8, activation='relu'))
+        nn.add(tf.keras.layers.Dense(8, activation='relu'))
+        nn.add(tf.keras.layers.Dense(1)) #output layer
+                         #could be 2, acitvation='softmax'
 
-        opt = SGD(learning_rate=.005) #can play with this
+        opt = tf.keras.optimizers.Adam() #can play with this
         nn.compile(loss='mse', optimizer=opt, metrics=['accuracy', 'mse'])
 
     
