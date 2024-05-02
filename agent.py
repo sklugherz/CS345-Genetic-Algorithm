@@ -12,6 +12,10 @@ class agent:
     TICKER = 'AAPL'
     data = data(TICKER, '1y', '1d')
 
+#new constants
+    MUTATION_RATE = .03
+    CROSSOVER_RATE = .03
+
     def __init__(self, fitness, total_earnings, risk_reward, start_datetime):
 
         self.fitness = fitness
@@ -32,12 +36,20 @@ class agent:
 
         self.active_trades = []
 
-    def mutate():
+    def mutate(): #first_layer_weights = model.layers[0].get_weights()[0]
+                  #first_layer_biases  = model.layers[0].get_weights()[1]
         """
-            for range of trades
-                if random.rand < mutation rate
-                    mutate a order by flipping a buy and sell order?
-            return trades
+        for each layer in nn:
+            new weights = []
+            for every weight vector in brain:
+                if rand.rand < mutaitonrate
+                    if 50/50 random check
+                        newweights append(weight vector * mutation rate)
+                    else 
+                        neweights append (weight vector * 1/mutaitonrate)
+                else
+                    neweights append(weight vector)
+            set_weights(new weights)
         """
         pass
 

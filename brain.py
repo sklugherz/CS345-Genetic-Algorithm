@@ -5,4 +5,10 @@ from keras.layers import Dense, Dropout, Input
 from keras.optimizers import Adam
 
 class brain:
-    pass
+    
+    def __init__():
+        nn = tf.keras.Sequential()
+
+    def compile():
+        pass
+    
