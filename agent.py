@@ -39,8 +39,11 @@ class agent:
     def mutate(): #first_layer_weights = model.layers[0].get_weights()[0]
                   #first_layer_biases  = model.layers[0].get_weights()[1]
                   #returns as numpy arrays
+                  #might have to do some more magic to actually retrieve the
+                  #array because it returns as list with array,dtype
         """
-        for each layer in nn:
+        for each layer in nn: OR for the one hidden layer <--depending on how 
+                                                            it returns
             new weights = []
             for every weight vector in layer:
                 if rand.rand < mutaitonrate
@@ -55,10 +58,10 @@ class agent:
         pass
 
     def reproduce():
-        """ lil lost on this one
+        """ 
             parent1,parent2 = choose_parents(parents)
             parent1,parent2 = cross_over(parent1, parent2)
-            if parent1 fitness <= parent2 fitness
+            if parent1 fitness <= parent2 fitness 
                 return parent2.mutate()
             else 
                 return parent1.mutate()
@@ -91,15 +94,15 @@ class agent:
 
 
     def crossover(parent1, parent2):
-        """
-            if rand.rand < crossover rate
-                point = random in range of number of trades
-                 return parent1 up to cross over point +  <--- refering to each parents trade set
-                    parent2 past cross over point,             when refering to parent themselves
-                    parent2 up to cross over point +
-                    parent1 past cross over point
-            else 
-                return parent1, parent2
+        """ <-- might loop through layers, dependent on mutation reuslts
+        if rand.rand < crossover rate:
+            point = random point in length of weights
+            return parent1.weights up to cross over point +  
+                    parent2.wieghts past cross over point,     
+                    parent2.weights up to cross over point +
+                    parent1.weights past cross over point
+        else:
+            return parent1, parent2       
         """
         pass
 
