@@ -38,10 +38,11 @@ class agent:
 
     def mutate(): #first_layer_weights = model.layers[0].get_weights()[0]
                   #first_layer_biases  = model.layers[0].get_weights()[1]
+                  #returns as numpy arrays
         """
         for each layer in nn:
             new weights = []
-            for every weight vector in brain:
+            for every weight vector in layer:
                 if rand.rand < mutaitonrate
                     if 50/50 random check
                         newweights append(weight vector * mutation rate)
@@ -49,7 +50,7 @@ class agent:
                         neweights append (weight vector * 1/mutaitonrate)
                 else
                     neweights append(weight vector)
-            set_weights(new weights)
+            layer.set_weights(new weights)
         """
         pass
 
