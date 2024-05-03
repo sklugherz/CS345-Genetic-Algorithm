@@ -13,17 +13,18 @@ class agent:
     next_id = 0
 
     def __init__(self, weights=None):
+        self.brain = brain()
 
         #  initialize weights for initial_population
         if weights is None:
             self.weights = np.array([])
-            for i in range(weights_length):
-                self.weights[i] = random.uniform(-0.1, 0.1)
+            for _ in self.brain.get_weights():
+                self.weights.append(random.uniform(-0.1, 0.1))
         else:
             self.weights = weights
         
         #  initialize neural network
-        self.brain = brain()
+        
 
         #  initialize id
         self.id = agent.next_id
