@@ -13,7 +13,7 @@ class agent:
     next_id = 0
 
     def __init__(self, weights=None):
-        self.brain = brain()
+        
 
         #  initialize weights for initial_population
         if weights is None:
@@ -24,7 +24,7 @@ class agent:
             self.weights = weights
         
         #  initialize neural network
-        
+        self.brain = brain(weights)
 
         #  initialize id
         self.id = agent.next_id
