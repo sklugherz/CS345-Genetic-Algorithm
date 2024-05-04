@@ -1,6 +1,5 @@
 import tensorflow as tf
 import numpy as np
-import pandas as pd
 import yfinance as yf
 import random
 
@@ -224,5 +223,5 @@ class Gen:
             agents = new_generation
 
 
-test = Gen(2, 3)
+test = Gen(20, 10)
 test.simulate()
